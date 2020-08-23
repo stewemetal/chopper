@@ -1,5 +1,14 @@
 # Changelog
 
+## 3.0.3
+
+- Packages upgrade
+
+## 3.0.2
+
+- Update analyzer
+- On `Response` and `Request`, deprecate `replace` method, use `copyWith` instead
+
 ## 3.0.1+1
 
 - Documentations update

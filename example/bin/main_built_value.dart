@@ -81,12 +81,12 @@ class BuiltValueConverter extends JsonConverter {
     // use [JsonConverter] to decode json
     final jsonRes = super.convertResponse(response);
     final body = _decode<Item>(jsonRes.body);
-    return jsonRes.replace<ResultType>(body: body);
+    return jsonRes.copyWith<ResultType>(body: body);
   }
 
   @override
   Request convertRequest(Request request) => super.convertRequest(
-        request.replace(
+        request.copyWith(
           body: serializers.serialize(request.body),
         ),
       );
